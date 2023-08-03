@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abel', Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+header h1 a {
+    text-decoration: none;
+    font-weight: 600;
+}
+header h1 a:visited {
+    color: black;
+}
+
+nav {
+    display: block;
+    transition: all ease 0.3s;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    list-style-type: none;
+    margin-right: 14px;
+    border-bottom: 2px solid #FFF;
+
+    transition: all ease 0.2s;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+}
+nav ul li a:visited {
+    color: #555;
+}
+nav ul li:hover {
+    border-bottom: 2px solid #CCC;
+} 
+
+.icons {
+    display: flex;
+    border-bottom: none;
+}
+.icon--face {
+    margin-right: 10px;
+}
+.icon--face, .icon--twitter {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.2s;
+}
+.icon--face a {
+    display: block;
+    background-image: url('../../icons/facebook.png');
+    background-position: center;
+    background-size: cover;
+    width: 65%;
+    height: 65%;
+}
+.icon--twitter a {
+    display: block;
+    background-image: url('../../icons/twitter.png');
+    background-position: center;
+    background-size: cover;
+    width: 65%;
+    height: 65%;
+}
+.icon--face:hover, .icon--twitter:hover {
+    background-color: #CCC;
+}
+.icons:hover {
+    border-bottom: none;
+}
+.menu {
+    display: none;
+    cursor: pointer;
+}
+.menu--bar {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transform-origin: center;
+    transition: all ease 0.3s;
+}
+.menu.ativar .menu--bar:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+.menu.ativar .menu--bar:nth-child(3) {
+    transform: translateY(-4px) rotate(45deg);
+}
+.menu.ativar .menu--bar:nth-child(2) {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+.container {
+    width: 100%;
+    height: 75vh;
+    background-image: url('../../images/containerBanner.webp');
+    background-position: center;
+    background-size: cover;
+}
+.container--menu {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+    display: flex;
+    align-items: center;
+}
+.container--menu ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 50px;
+    font-weight: 400;
+    transition: all ease 0.1s;
+}
+.container--menu ul li {
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+.container--menu ul {
+    margin-left: 10rem;
+}
+.container--menu ul li a:hover{
+    border-bottom: 2px solid #FFF;
+}
+
+
+.info {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(230, 157, 0);
+}
+.info p {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 38px;
+}
+.info button {
+    padding: 10px 25px;
+    color: #FFF;
+    background-color: rgb(230, 157, 0);
+    border: 1px solid #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.info button:hover {
+    color: rgb(230, 157, 0);
+    background-color: #FFF;
+    font-weight: 600;
+}
+
+.info--queijo, .info--bebida {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info--queijo--informacao, .info--bebida--img, .info--bebida--informacao {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.info--queijo--informacao h2,
+.info--bebida--informacao h2 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.info--queijo--informacao p,
+.info--bebida--informacao p {
+    color: #555;
+    font-size: 19px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}    
+.info--queijo--informacao a {
+    color: #555;
+    font-size: 19px;
+    border-bottom: 1px solid #FFF;
+    text-decoration: none;
+    transition: all ease 0.2s;
+}
+.info--queijo--informacao a:hover {
+    border-bottom: 1px solid #555;
+}
+.info--queijo--img {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}    
+
+.img--queijo img {
+    width: 100%;
+}
+.animacao1{
+    animation: go-back 1s;
+}
+@keyframes go-back {
+    from {
+        opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+.section--img {
+    background-image: url('../../images/pessoaSeAlimentando.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 75vh;
+}
+.section--opacity {
+    background-color: rgba(0, 0, 0, 0.39);
+    width: 100%;
+    height: 100%;
+}
+
+.img--bebida img {
+    width: 100%;
+}
+.animacao2 {
+    animation: go 1s;
+}
+@keyframes go {
+    from {
+        opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+
+.info--rua--endereco h2 {
+    font-size: 45px;
+    font-weight: 400;
+    color: #FFF;
+}
+.info--rua--endereco button {
+    margin-top: 15px;
+}
+.info--rua--endereco {
+    margin-bottom: 40px;
+}
+.info--rua--data {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.info--rua--data h2{
+    font-size: 35px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.formulario {
+    background-image: url('../../images/Feijoada.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 45vh;
+}
+.area--formulario {
+    background-color: rgba(0, 0, 0, 0.39);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.area--formulario h3 {
+    color: #FFF;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.area--formulario p {
+    color: #cfcdcd;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+.formulario--cadrastro button {
+    color: #FFF;
+    background-color: #ffffff00;
+    border: 1px solid #FFF;
+    padding: 15px 35px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.formulario--cadrastro button:hover {
+    background-color: #FFF;
+    color: #000;
+}
+.formulario--cadrastro input {
+    padding: 22px 32px;
+    width: 214px;
+    font-size: 16px;
+    outline: none;
+    margin-right: 10px;
+}
+.formulario--cadrastro input:focus {
+    outline: 2px solid #FFF;
+    outline-offset: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.rede--social {
+    display:flex;
+}
+.social--facebook, .social--twitter {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.2s;
+}
+.social--facebook a {
+    text-decoration: none;
+    display: block;
+    background-image: url('../../icons/facebook.png');
+    background-position: center;
+    background-size: cover;
+    width: 65%;
+    height: 65%;
+}
+.social--twitter a {
+    text-decoration: none;
+    display: block;
+    background-image: url('../../icons/twitter.png');
+    background-position: center;
+    background-size: cover;
+    width: 65%;
+    height: 65%;
+}
+.social--facebook:hover, .social--twitter:hover {
+    background-color: #CCC;
+}
+
+
+@media (max-width:800px) {
+    nav {
+        display: none;
+        opacity: 0;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 0vh;
+        background-color: white;
+        bottom: -12vh;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 33px;
+    }
+    nav ul li a {
+        font-size: 40px;
+    } 
+    .icon--face, .icon--twitter {
+        width: 35px;
+        height: 35px;
+    }
+    .menu {
+        display: block;
+    }
+
+    .container--menu ul {
+        margin-left: 4rem;
+    }
+    .container--menu ul li a {
+        font-size: 35px;
+    }
+
+    .info {
+        padding: 21px;
+    }
+    .info p {
+        font-size: 25px;
+    }
+
+    .info--queijo--informacao a {
+        border-bottom: 1px solid #555;
+    }
+
+    .info--rua--endereco h2 {
+        font-size: 33px;
+    }
+    .info--rua--data h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 500px) {
+    .info {
+        height: 60vh;
+    }
+    .info button {
+        font-size: 21px;
+        padding: 10px 54px;
+    } 
+
+    .info--queijo {
+        flex-direction: column-reverse;
+    }
+    .info--bebida {
+        flex-direction: column;
+    }
+    .info--queijo--informacao h2, .info--bebida--informacao h2 {
+        font-size: 25px;
+    }
+    .info--queijo--informacao p, .info--bebida--informacao p,
+    .info--queijo--informacao a {
+        font-size: 17px;
+    }
+    .info--queijo--informacao a {
+        border-bottom: 1px solid #555;
+    }
+
+    .info--rua--endereco h2 {
+        font-size: 25px;
+    }
+    .info--rua--data {
+        flex-direction: column;
+    }
+    .info--rua--data h2 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+    .info--rua--endereco button {
+        margin-top: 25px;
+    }
+
+    .formulario {
+        height: 60vh;
+    }
+    .area--formulario h3 {
+        font-size: 25px;
+    }
+    .area--formulario p {
+        font-size: 17px;
+    }
+    .formulario--cadrastro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .formulario--cadrastro input {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 50vh;
+        padding-left: 25px;
+        text-align: start;
+    }
+}
