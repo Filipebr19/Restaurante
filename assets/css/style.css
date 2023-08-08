@@ -392,6 +392,220 @@ footer {
     background-color: #CCC;
 }
 
+.active--menu {
+    border-bottom: 1px solid #555;
+}
+
+
+
+
+/* Page "Nossa historia"*/
+
+.conteudo--historia {
+    margin-top: 3rem;
+    padding: 10px 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 6rem;
+}
+.conteudo--historia h1 {
+    font-size: 37px;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+.conteudo--historia .conteudo--historia--texto p {
+    color: #555;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+/*Page reserva*/
+.formularioArea {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    padding: 10px 16rem;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+.formularioArea h1{
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.formularioArea p {
+    color: #555;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 60px;
+}
+.formularioArea form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    min-width: 60vw;
+}
+.required {
+    color: #BBB;
+}
+.input--fullName {
+    display: flex;
+}
+.input--name, .input--lastName, 
+.input--email, .input--textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.input--name {
+    margin-right: 10px;
+}
+#name, #last--name {
+    width: 30vw;
+    border-radius: 0;
+    outline: 0;
+    border: 1px solid #bbb;
+    padding: 10px;
+}
+#email {
+    width: 61vw;
+    border-radius: 0;
+    outline: 0;
+    border: 1px solid #bbb;
+    padding: 10px;
+}
+#textarea {
+    width: 61vw;
+    height: 17vh;
+    border-radius: 0;
+    outline: 0;
+    border: 1px solid #bbb;
+    padding: 10px;
+}
+#name, #last--name, #email, #textarea {
+    font-size: 16px;
+}
+#name:focus, #last--name:focus, #email:focus, #textarea:focus {
+    outline: 2px solid #000;
+}
+.input--fullName, .input--email, .input--textarea {
+    margin-bottom: 25px;
+}
+.formularioArea form div label {
+    margin-bottom: 5px;
+}
+.formularioArea form button {
+    padding: 10px 25px;
+    color: #FFF;
+    background-color: rgb(230, 157, 0);
+    border: 2px solid #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.formularioArea form button:hover {
+    background-color: #FFF;
+    color: rgb(230, 157, 0);
+    font-weight: 600;
+    border: 2px solid rgb(230, 157, 0);
+}
+
+
+
+/*Page menu/cardapio*/
+.cardapio {
+    background-color: rgb(230, 157, 0);
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 3.3vmax 0px;
+}
+.cardapio h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+.cardapio .buttons--cardapio {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.btn--comida {
+    margin-right: 10px;
+}
+.btn--comida, .btn--bebida  {
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+    border-bottom: 1px solid #ffffff00;
+}
+.btnActive{
+    border-bottom: 1px solid #FFF;
+}
+.cardapio h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.alimentos .alimentos--comidaBebida h3 {
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.alimentos .alimentos--comidaBebida p {
+    color: #DDD;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.alimentos--comidaBebida {
+    margin-bottom: 2rem;
+}
+
+
+/*Page fotos*/
+.container--images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+.imgArea {
+    width: 32vw;
+    height: 32vh;
+}
+.imgArea img {
+    width: 100%;
+    height: 100%;
+}
+[data-anime] {
+    opacity: 0;
+    transition: all ease 0.3s;
+    transform: translate3d(0, 60px, 0);
+}
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+
+
+
+
+
 
 @media (max-width:800px) {
     nav {
@@ -446,6 +660,22 @@ footer {
     }
     .info--rua--data h2 {
         font-size: 26px;
+    }
+
+    .conteudo--historia {
+        padding: 10px 4rem;
+    }
+
+    .formularioArea {
+        padding: 10px 8rem;
+    }
+
+    .container--images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .imgArea {
+        width: 80vw;
+        height: 45vh;
     }
 }
 
@@ -516,4 +746,29 @@ footer {
         padding-left: 25px;
         text-align: start;
     }
+
+    .conteudo--historia {
+        padding: 10px 2rem;
+    }
+
+    .formularioArea {
+        padding: 10px 1rem;
+    }
+    #name, #last--name {
+        width: 40vw;
+    }
+    #email, #textarea {
+        width: 83vw;
+    } 
+
+    .container--images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .imgArea {
+        width: 100vw;
+        height: 31vh;
+    }
 }
+
+
+
